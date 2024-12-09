@@ -60,6 +60,7 @@
         <maven-deploy-plugin.version>3.1.0</maven-deploy-plugin.version>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+        <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
         <jupiter.version>5.10.0</jupiter.version>
     </properties>
 
