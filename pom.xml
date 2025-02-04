@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>dev.ikm.tinkar.data</groupId>
+    <groupId>dev.ikm.data.tinkar</groupId>
     <artifactId>tinkar-data-bom</artifactId>
     <version>1.8.0-change-group-id-SNAPSHOT</version>
     <name>Tinkar Data BOM</name>
