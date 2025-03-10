@@ -50,7 +50,7 @@
 
     <properties>
         <!-- Tinkar dependencies -->
-        <tinkar-core.version>1.88.0</tinkar-core.version>
+        <tinkar-core.version>1.91.0-SNAPSHOT</tinkar-core.version>
         <tinkar-schema.version>1.38.0</tinkar-schema.version>
         <tinkar-transformer-api.version>1.7.0</tinkar-transformer-api.version>
         <tinkar-composer.version>1.6.0</tinkar-composer.version>
@@ -59,9 +59,9 @@
         <eclipse-collections-api.version>11.1.0-r11</eclipse-collections-api.version>
         <!-- Maven dependencies -->
         <maven-plugin-plugin.version>3.15.1</maven-plugin-plugin.version>
-        <maven-plugin-annotations.version>3.15.1</maven-plugin-annotations.version>
-        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
         <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-plugin-annotations.version>3.15.1</maven-plugin-annotations.version>
         <maven-plugin-api.version>3.9.9</maven-plugin-api.version>
         <maven-invoker-plugin.version>3.9.0</maven-invoker-plugin.version>
         <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
@@ -104,17 +104,88 @@
                     <artifactId>maven-invoker-plugin</artifactId>
                     <version>${maven-invoker-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>                
+             	<plugin>
+                	<groupId>org.apache.maven</groupId>
+                	<artifactId>maven-plugin-api</artifactId>
+                	<version>${maven-plugin-api.version}</version>
+            	</plugin>     
+	            <plugin>
+	                <groupId>org.apache.maven.plugin-tools</groupId>
+	                <artifactId>maven-plugin-annotations</artifactId>
+	                <version>${maven-plugin-annotations.version}</version>
+	            </plugin>            	          
             </plugins>
         </pluginManagement>
     </build>
 
     <dependencyManagement>
         <dependencies>
+ 		    <dependency>
+      			<groupId>org.checkerframework</groupId>
+      			<artifactId>checker-qual</artifactId>
+      			<type>jar</type>
+      			<version>3.47.0</version>
+    			</dependency>
+        
             <dependency>
                 <groupId>dev.ikm.tinkar</groupId>
                 <artifactId>entity-provider</artifactId>
                 <version>${tinkar-core.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>data-ephemeral-provider</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>entity</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>reasoner</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>reasoner-elk-owl</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+
+			<dependency>
+				<groupId>dev.ikm.tinkar</groupId>
+				<artifactId>reasoner-hybrid</artifactId>
+				<version>${tinkar-core.version}</version>
+			</dependency>
+
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>data-ephemeral-provider</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+
+                        
+            <dependency>
+                <groupId>dev.ikm.tinkar</groupId>
+                <artifactId>reasoner-elk-snomed</artifactId>
+                <version>${tinkar-core.version}</version>
+            </dependency>
+            
             <dependency>
                 <groupId>dev.ikm.tinkar</groupId>
                 <artifactId>entity</artifactId>
@@ -160,6 +231,7 @@
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>${maven-plugin-plugin.version}</version>
             </dependency>
+            
             <dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
