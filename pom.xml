@@ -134,7 +134,7 @@
       			<groupId>org.checkerframework</groupId>
       			<artifactId>checker-qual</artifactId>
       			<type>jar</type>
-      			<version>3.47.0</version>
+      			<!--<version>3.47.0</version>-->
     			</dependency>
         
             <dependency>
