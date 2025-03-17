@@ -71,7 +71,7 @@
         <!-- Logging dependencies -->
         <log4j.version>3.0.0-alpha1</log4j.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <checker-qual.version>3.47.0</checker-qual.version>
+        <!--<checker-qual.version>3.47.0</checker-qual.version>-->
     </properties>
 
     <build>
@@ -130,14 +130,7 @@
     </build>
 
     <dependencyManagement>
-        <dependencies>
- 		    <dependency>
-      			<groupId>org.checkerframework</groupId>
-      			<artifactId>checker-qual</artifactId>
-      			<type>jar</type>
-      			<version>${checker-qual.version}</version>
-    			</dependency>
-        
+        <dependencies>        
             <dependency>
                 <groupId>dev.ikm.tinkar</groupId>
                 <artifactId>entity-provider</artifactId>
