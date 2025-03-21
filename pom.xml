@@ -50,7 +50,7 @@
 
     <properties>
         <!-- Tinkar dependencies -->
-        <tinkar-core.version>1.90.0</tinkar-core.version>
+        <tinkar-core.version>1.92.0</tinkar-core.version>
         <tinkar-schema.version>1.38.0</tinkar-schema.version>
         <tinkar-transformer-api.version>1.7.0</tinkar-transformer-api.version>
         <tinkar-composer.version>1.6.0</tinkar-composer.version>
